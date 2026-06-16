@@ -7,73 +7,79 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section 
-        className="min-h-screen relative overflow-hidden"
+        className="min-h-screen relative overflow-hidden bg-[#E53935]"
         style={{
           backgroundImage: 'url(/bg-pattern.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundBlend: 'overlay'
         }}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-32 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="text-white space-y-8 z-10">
-              {/* Decorative element */}
-              <div className="w-16 h-32 border-4 border-white mb-8 opacity-40"></div>
-
+            <div className="space-y-8 z-10">
               {/* Main Heading */}
-              <h1 className="heading-xl text-white">
-                Where
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-tight">
+                <span className="text-black">Where</span>
                 <br />
-                <span className="font-bold">Projects</span>
+                <span className="text-white">Projects</span>
                 <br />
-                Meet
+                <span className="text-black">Meet</span>
                 <br />
-                <span className="font-bold">Professionals.</span>
+                <span className="text-white">Professionals.</span>
               </h1>
 
+              {/* Divider Line */}
+              <div className="flex items-center space-x-3">
+                <div className="flex-1 h-1 bg-black max-w-[80px]"></div>
+                <div className="w-3 h-3 bg-black rounded-full"></div>
+              </div>
+
               {/* Avatars and Stats */}
-              <div className="flex flex-col items-start space-y-6">
-                <div className="flex items-center space-x-3">
-                  <div className="flex -space-x-3">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <div
-                        key={i}
-                        className="avatar bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center font-bold text-gray-600"
-                      >
-                        {i}
-                      </div>
-                    ))}
-                  </div>
-                  <span className="text-2xl font-bold">50+</span>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <img
+                    src="/FREELANCERS ROUNDS.png"
+                    alt="Freelancers"
+                    className="h-24 object-contain"
+                  />
+                  <span className="text-white text-3xl font-black">50+</span>
                 </div>
-                <p className="text-xl font-semibold">freelancers joined!</p>
+                <p className="text-white text-2xl font-bold">freelancers joined!</p>
+              </div>
+
+              {/* Divider Line */}
+              <div className="flex items-center space-x-3">
+                <div className="flex-1 h-1 bg-black max-w-[80px]"></div>
+                <div className="w-3 h-3 bg-black rounded-full"></div>
               </div>
 
               {/* Tagline */}
-              <div className="space-y-3 pt-8 border-t border-white border-opacity-30">
-                <h2 className="text-3xl md:text-4xl font-bold">
+              <div className="space-y-3">
+                <h2 className="text-4xl md:text-5xl font-black text-white">
                   Learn. Create. Earn.
                 </h2>
-                <p className="text-lg text-gray-100 max-w-md">
+                <p className="text-white text-lg font-medium max-w-md">
                   Become part of PRO's professional network and start earning from your creative skills.
                 </p>
               </div>
 
               {/* CTA Button */}
-              <button className="btn-primary mt-8 inline-block">
+              <button className="px-8 py-4 bg-white text-black font-bold text-lg rounded-full hover:bg-gray-100 transition-colors inline-block">
                 Join PRO!
               </button>
             </div>
 
             {/* Right Content - PRO Logo */}
             <div className="flex items-center justify-center">
-              <div className="text-white text-center">
-                <div className="text-9xl md:text-[120px] font-black tracking-tighter mb-4">
-                  PRO
-                </div>
-                <div className="text-2xl md:text-3xl font-semibold tracking-widest">
+              <div className="text-center">
+                <img
+                  src="/LOGO.png"
+                  alt="PRO Logo"
+                  className="w-full max-w-md mx-auto mb-6"
+                />
+                <div className="text-white text-lg font-semibold tracking-widest">
                   PROJECTS × PROFESSIONALS
                 </div>
               </div>
