@@ -100,12 +100,36 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
           {/* Top Statistics Bar */}
-          <div className="mb-12">
+          <div className="mb-12 relative rounded-3xl shadow-lg overflow-hidden">
             <img
               src="/section 2/TABULAR SECTION.png"
               alt="Statistics"
               className="w-full h-auto object-contain"
             />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center w-full px-8">
+                <div>
+                  <div className="text-4xl md:text-5xl font-black text-white">200+</div>
+                  <div className="text-black font-bold text-sm md:text-base mt-2">Graphic Designs</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-black text-white">50+</div>
+                  <div className="text-black font-bold text-sm md:text-base mt-2">3D Projects</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-black text-white">20+</div>
+                  <div className="text-black font-bold text-sm md:text-base mt-2">Brands Managed</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-black text-white">5+</div>
+                  <div className="text-black font-bold text-sm md:text-base mt-2">Ad Shoots</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-black text-white">3+</div>
+                  <div className="text-black font-bold text-sm md:text-base mt-2">Architecture Projects</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Main Content Grid */}
