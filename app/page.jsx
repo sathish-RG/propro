@@ -1,12 +1,10 @@
 'use client'
 
-import { useState } from 'react'
-
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section 
+      <section
         className="min-h-screen relative overflow-hidden bg-[#E53935]"
         style={{
           backgroundImage: 'url(/bg-pattern.png)',
@@ -19,7 +17,6 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8 z-10">
-              {/* Main Heading */}
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-tight">
                 <span className="text-black">Where</span>
                 <br />
@@ -30,13 +27,11 @@ export default function Home() {
                 <span className="text-white">Professionals.</span>
               </h1>
 
-              {/* Divider Line */}
               <div className="flex items-center space-x-3">
                 <div className="flex-1 h-1 bg-black max-w-[80px]"></div>
                 <div className="w-3 h-3 bg-black rounded-full"></div>
               </div>
 
-              {/* Avatars and Stats */}
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
                   <img
@@ -49,13 +44,11 @@ export default function Home() {
                 <p className="text-white text-2xl font-bold">freelancers joined!</p>
               </div>
 
-              {/* Divider Line */}
               <div className="flex items-center space-x-3">
                 <div className="flex-1 h-1 bg-black max-w-[80px]"></div>
                 <div className="w-3 h-3 bg-black rounded-full"></div>
               </div>
 
-              {/* Tagline */}
               <div className="space-y-3">
                 <h2 className="text-4xl md:text-5xl font-black text-white">
                   Learn. Create. Earn.
@@ -65,7 +58,6 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* CTA Button */}
               <button className="px-8 py-4 bg-white text-black font-bold text-lg rounded-full hover:bg-gray-100 transition-colors inline-block">
                 Join PRO!
               </button>
@@ -88,8 +80,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Second Hero Section */}
-      <section 
+      {/* Second Section */}
+      <section
         className="relative overflow-hidden py-12 lg:py-20"
         style={{
           backgroundImage: 'url(/section%202/WHITE%20BG.jpg)',
@@ -99,7 +91,7 @@ export default function Home() {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          {/* Top Statistics Bar */}
+          {/* Statistics Bar */}
           <div className="mb-12 relative rounded-3xl shadow-lg overflow-hidden">
             <img
               src="/section 2/TABULAR SECTION.png"
@@ -134,14 +126,12 @@ export default function Home() {
 
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Left Content - Team Image */}
             <div className="flex items-center justify-center relative">
               <img
                 src="/section 2/IMG 01.png"
                 alt="PRO Team"
                 className="w-full max-w-md mx-auto object-contain"
               />
-              {/* Sparkle decorations */}
               <img
                 src="/section 2/SPARKLE 01.png"
                 alt="Sparkle"
@@ -154,27 +144,24 @@ export default function Home() {
               />
             </div>
 
-            {/* Right Content - Text */}
             <div className="space-y-6">
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                 <span className="text-black">Need</span>
                 <br />
                 <span className="text-black">Creative</span>
                 <br />
-                <span className="text-pro-red">Work Done?</span>
+                <span className="text-[#E53935]">Work Done?</span>
               </h2>
 
               <div className="space-y-4">
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed max-w-lg">
                   Whether you're a business owner, startup, content creator, or brand, PRO connects you with skilled professionals ready to bring your ideas to life.
                 </p>
-
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed max-w-lg">
                   From concept to completion, we deliver high-quality creative solutions tailored to your goals.
                 </p>
               </div>
 
-              {/* Brand Symbols */}
               <div className="pt-4">
                 <img
                   src="/section 2/BRAND SYMBOL 01.png"
@@ -187,136 +174,106 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Special Offers Section */}
-      <section 
-        className="relative overflow-hidden py-16 lg:py-24"
+      {/* Special Offers Section — Section 3 */}
+      <section
+        className="relative overflow-hidden py-12 lg:py-16"
         style={{
-          backgroundImage: 'url(/section%203/WHITE%20BG.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.04'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), url(/section%203/WHITE%20BG.jpg)`,
+          backgroundSize: 'auto, cover',
+          backgroundPosition: 'center, center',
+          backgroundColor: '#fff'
         }}
       >
-        {/* Top Left Sparkle */}
-        <img
-          src="/section 3/SPARKLE 01.png"
-          alt="Sparkle"
-          className="absolute top-12 left-8 w-14 h-14 object-contain opacity-90 z-20"
-        />
-
         {/* Bottom Right Sparkle */}
-        <img
-          src="/section 3/SPARKLE 02.png"
-          alt="Sparkle"
-          className="absolute bottom-32 right-16 w-16 h-16 object-contain opacity-90 z-20"
-        />
+        <div className="absolute bottom-14 right-10 z-20 pointer-events-none">
+          <svg width="56" height="56" viewBox="0 0 40 40" fill="#E53935" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 0L23 17L40 20L23 23L20 40L17 23L0 20L17 17L20 0Z" />
+          </svg>
+        </div>
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          {/* Header with Sparkle */}
-          <div className="mb-20 flex items-center space-x-3">
-            <img
-              src="/section 3/SPARKLE 01.png"
-              alt="Sparkle"
-              className="w-8 h-8 object-contain"
-            />
-            <p className="text-2xl md:text-3xl text-gray-800 font-light tracking-widest">Special thing about PRO!</p>
+
+          {/* Section Label */}
+          <div className="flex items-center gap-3 mb-10 lg:mb-14">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#E53935" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5L12 2Z" />
+            </svg>
+            <span className="text-base md:text-lg text-gray-800 tracking-widest font-light">
+              Special thing about PRO!
+            </span>
           </div>
 
-          {/* Main Offers Section - Responsive Layout */}
-          <div className="mb-32">
-            {/* Mobile & Tablet: Stacked Layout */}
-            <div className="md:hidden space-y-12">
-              {/* Left - Clients Offer */}
-              <div className="space-y-4">
-                <h3 className="text-7xl sm:text-8xl font-black text-black leading-none">25%</h3>
-                <p className="text-2xl sm:text-3xl text-pro-red font-black leading-tight">
-                  offer on<br />
-                  first project
-                </p>
-                <button className="px-10 py-3 bg-black text-white font-bold text-base rounded-md hover:bg-gray-800 transition-colors w-full sm:w-auto">
-                  For Clients
-                </button>
-              </div>
+          {/* Offers + Person Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start mb-16 lg:mb-20">
 
-              {/* Center - Freelancers Offer */}
-              <div className="space-y-4">
-                <h3 className="text-7xl sm:text-8xl font-black text-pro-red leading-none">50%</h3>
-                <p className="text-2xl sm:text-3xl text-black font-black leading-tight">
-                  Project Share<br />
-                  on every project
-                </p>
-                <button className="px-10 py-3 bg-pro-red text-white font-bold text-base rounded-md hover:bg-red-700 transition-colors w-full sm:w-auto">
-                  For Freelancers
-                </button>
-              </div>
-
-              {/* Image */}
-              <div className="flex justify-center pt-4">
-                <img
-                  src="/section 3/IMG 01.png"
-                  alt="PRO Professional"
-                  className="w-full max-w-xs object-contain"
-                />
-              </div>
+            {/* Left — Clients */}
+            <div className="space-y-4">
+              <h3 className="text-[80px] sm:text-[88px] lg:text-[100px] font-black text-black leading-none tracking-tight">
+                25%
+              </h3>
+              <p className="text-2xl lg:text-[28px] font-black text-[#E53935] leading-snug">
+                offer on<br />first project
+              </p>
+              <button className="mt-2 px-10 py-3.5 bg-black text-white font-bold text-[15px] rounded hover:bg-gray-800 transition-colors">
+                For Clients
+              </button>
             </div>
 
-            {/* Desktop: 3 Column Layout */}
-            <div className="hidden md:grid md:grid-cols-3 gap-8 lg:gap-12 items-start">
-              {/* Left - Clients Offer */}
-              <div className="space-y-6">
-                <h3 className="text-8xl lg:text-9xl font-black text-black leading-none">25%</h3>
-                <p className="text-3xl lg:text-4xl text-pro-red font-black leading-tight">
-                  offer on<br />
-                  first project
-                </p>
-                <button className="px-12 py-4 bg-black text-white font-bold text-base lg:text-lg rounded-md hover:bg-gray-800 transition-colors w-auto">
-                  For Clients
-                </button>
-              </div>
+            {/* Center — Freelancers */}
+            <div className="space-y-4">
+              <h3 className="text-[80px] sm:text-[88px] lg:text-[100px] font-black text-[#E53935] leading-none tracking-tight">
+                50%
+              </h3>
+              <p className="text-2xl lg:text-[28px] font-black text-black leading-snug">
+                Project Share<br />on every project
+              </p>
+              <button className="mt-2 px-10 py-3.5 bg-[#E53935] text-white font-bold text-[15px] rounded hover:bg-red-700 transition-colors">
+                For Freelancers
+              </button>
+            </div>
 
-              {/* Center - Freelancers Offer */}
-              <div className="space-y-6">
-                <h3 className="text-8xl lg:text-9xl font-black text-pro-red leading-none">50%</h3>
-                <p className="text-3xl lg:text-4xl text-black font-black leading-tight">
-                  Project Share<br />
-                  on every project
-                </p>
-                <button className="px-12 py-4 bg-pro-red text-white font-bold text-base lg:text-lg rounded-md hover:bg-red-700 transition-colors w-auto">
-                  For Freelancers
-                </button>
-              </div>
-
-              {/* Right - Professional Image */}
-              <div className="flex items-start justify-center lg:justify-end">
-                <img
-                  src="/section 3/IMG 01.png"
-                  alt="PRO Professional"
-                  className="w-full max-w-sm object-contain"
-                />
-              </div>
+            {/* Right — Person Image */}
+            <div className="flex justify-center md:justify-end items-start">
+              <img
+                src="/section 3/IMG 01.png"
+                alt="PRO Professional"
+                className="w-full max-w-[220px] sm:max-w-[260px] lg:max-w-[300px] object-contain"
+              />
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="h-px bg-gray-300 my-20"></div>
-
-          {/* Founder Section - Full Width Centered */}
-          <div className="text-center space-y-6 max-w-3xl mx-auto">
-            <p className="text-lg text-gray-800 font-light">
-              Hello, I'm <span className="text-pro-red font-semibold">Rajeev Ramanathan</span>, Founder of PRO.
-            </p>
-            <p className="text-base text-gray-800 leading-relaxed">
-              My journey started during my college years when I struggled to find creative work opportunities despite having the skills. I soon realized that many talented students and freelancers faced the same challenge. That's why I created PRO—a community where creative professionals can connect with real projects, gain experience, and earn through their skills.
-            </p>
-            <p className="text-base text-gray-800 leading-relaxed">
-              Today, PRO continues to grow with one mission: <span className="font-semibold text-pro-red">Learn. Create. Earn.</span>
-            </p>
+          {/* Founder Bio - 2 Column Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start mt-[-100px] md:mt-[-180px] lg:mt-[-400px]">
+            <div className="text-left pt-8 md:pt-12">
+              <p className="text-base md:text-[17px] text-gray-800 mb-4 font-normal">
+                Hello, I&apos;m{' '}
+                <span className="text-[#E53935] font-semibold">Rajeev Ramanathan</span>
+                , Founder of PRO.
+              </p>
+              <p className="text-sm md:text-[14px] text-gray-600 leading-relaxed mb-4">
+                My journey started during my college years when I struggled to find creative work
+                opportunities despite having the skills. I soon realized that many talented students
+                and freelancers faced the same challenge. That&apos;s why I created PRO—a community
+                where creative professionals can connect with real projects, gain experience, and
+                earn through their skills.
+              </p>
+              <p className="text-[14px] md:text-[15px] text-gray-800">
+                Today, PRO continues to grow with one mission:{' '}
+                <span className="text-[#E53935] font-bold italic text-[15px] md:text-[16px]">
+                  Learn. Create. Earn.
+                </span>
+              </p>
+            </div>
+            <div></div>
           </div>
+
+          
+
         </div>
       </section>
 
       {/* CTA Section */}
-      <section 
+      <section
         className="py-20 text-white text-center relative overflow-hidden"
         style={{
           backgroundImage: 'url(/bg-pattern.png)',
@@ -330,9 +287,7 @@ export default function Home() {
           <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Join 50+ creative professionals already earning through PRO. Start your journey today!
           </p>
-          <button className="btn-primary">
-            Start Your Journey
-          </button>
+          <button className="btn-primary">Start Your Journey</button>
         </div>
       </section>
 
