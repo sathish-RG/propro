@@ -188,78 +188,129 @@ export default function Home() {
       </section>
 
       {/* Special Offers Section */}
-      <section className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-20 lg:py-32 relative">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 mb-6">
-              <span className="text-pro-red text-4xl">✦</span>
-              <p className="text-xl text-gray-700 font-semibold">Special thing about PRO!</p>
+      <section 
+        className="relative overflow-hidden py-16 lg:py-24"
+        style={{
+          backgroundImage: 'url(/section%203/WHITE%20BG.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Top Left Sparkle */}
+        <img
+          src="/section 3/SPARKLE 01.png"
+          alt="Sparkle"
+          className="absolute top-12 left-8 w-14 h-14 object-contain opacity-90 z-20"
+        />
+
+        {/* Bottom Right Sparkle */}
+        <img
+          src="/section 3/SPARKLE 02.png"
+          alt="Sparkle"
+          className="absolute bottom-32 right-16 w-16 h-16 object-contain opacity-90 z-20"
+        />
+
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+          {/* Header with Sparkle */}
+          <div className="mb-20 flex items-center space-x-3">
+            <img
+              src="/section 3/SPARKLE 01.png"
+              alt="Sparkle"
+              className="w-8 h-8 object-contain"
+            />
+            <p className="text-2xl md:text-3xl text-gray-800 font-light tracking-widest">Special thing about PRO!</p>
+          </div>
+
+          {/* Main Offers Section - Responsive Layout */}
+          <div className="mb-32">
+            {/* Mobile & Tablet: Stacked Layout */}
+            <div className="md:hidden space-y-12">
+              {/* Left - Clients Offer */}
+              <div className="space-y-4">
+                <h3 className="text-7xl sm:text-8xl font-black text-black leading-none">25%</h3>
+                <p className="text-2xl sm:text-3xl text-pro-red font-black leading-tight">
+                  offer on<br />
+                  first project
+                </p>
+                <button className="px-10 py-3 bg-black text-white font-bold text-base rounded-md hover:bg-gray-800 transition-colors w-full sm:w-auto">
+                  For Clients
+                </button>
+              </div>
+
+              {/* Center - Freelancers Offer */}
+              <div className="space-y-4">
+                <h3 className="text-7xl sm:text-8xl font-black text-pro-red leading-none">50%</h3>
+                <p className="text-2xl sm:text-3xl text-black font-black leading-tight">
+                  Project Share<br />
+                  on every project
+                </p>
+                <button className="px-10 py-3 bg-pro-red text-white font-bold text-base rounded-md hover:bg-red-700 transition-colors w-full sm:w-auto">
+                  For Freelancers
+                </button>
+              </div>
+
+              {/* Image */}
+              <div className="flex justify-center pt-4">
+                <img
+                  src="/section 3/IMG 01.png"
+                  alt="PRO Professional"
+                  className="w-full max-w-xs object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Desktop: 3 Column Layout */}
+            <div className="hidden md:grid md:grid-cols-3 gap-8 lg:gap-12 items-start">
+              {/* Left - Clients Offer */}
+              <div className="space-y-6">
+                <h3 className="text-8xl lg:text-9xl font-black text-black leading-none">25%</h3>
+                <p className="text-3xl lg:text-4xl text-pro-red font-black leading-tight">
+                  offer on<br />
+                  first project
+                </p>
+                <button className="px-12 py-4 bg-black text-white font-bold text-base lg:text-lg rounded-md hover:bg-gray-800 transition-colors w-auto">
+                  For Clients
+                </button>
+              </div>
+
+              {/* Center - Freelancers Offer */}
+              <div className="space-y-6">
+                <h3 className="text-8xl lg:text-9xl font-black text-pro-red leading-none">50%</h3>
+                <p className="text-3xl lg:text-4xl text-black font-black leading-tight">
+                  Project Share<br />
+                  on every project
+                </p>
+                <button className="px-12 py-4 bg-pro-red text-white font-bold text-base lg:text-lg rounded-md hover:bg-red-700 transition-colors w-auto">
+                  For Freelancers
+                </button>
+              </div>
+
+              {/* Right - Professional Image */}
+              <div className="flex items-start justify-center lg:justify-end">
+                <img
+                  src="/section 3/IMG 01.png"
+                  alt="PRO Professional"
+                  className="w-full max-w-sm object-contain"
+                />
+              </div>
             </div>
           </div>
 
-          {/* Offers Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            {/* Clients Offer */}
-            <div className="space-y-6 p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-6xl md:text-7xl font-black text-black">
-                25%
-              </h3>
-              <p className="text-xl md:text-2xl text-pro-red font-bold">
-                offer on first project
-              </p>
-              <button className="btn-secondary bg-black hover:bg-gray-800 text-white">
-                For Clients
-              </button>
-              <p className="text-gray-600 text-sm pt-4">
-                Get exclusive discounts on your first project with PRO professionals
-              </p>
-            </div>
+          {/* Divider */}
+          <div className="h-px bg-gray-300 my-20"></div>
 
-            {/* Freelancers Offer */}
-            <div className="space-y-6 p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-6xl md:text-7xl font-black text-pro-red">
-                50%
-              </h3>
-              <p className="text-xl md:text-2xl text-black font-bold">
-                Project Share on every project
-              </p>
-              <button className="btn-secondary bg-pro-red hover:bg-red-700">
-                For Freelancers
-              </button>
-              <p className="text-gray-600 text-sm pt-4">
-                Earn 50% share on every successful project you complete
-              </p>
-            </div>
-          </div>
-
-          {/* Founder Section */}
-          <div className="mt-20 space-y-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Founder Text */}
-              <div className="space-y-6 order-2 lg:order-1">
-                <h3 className="heading-md text-black">
-                  Hello, I'm <span className="text-pro-red">Rajeev Ramanathan</span>, Founder of PRO.
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  My journey started during my college years when I struggled to find creative work opportunities despite having the skills. I soon realized that many talented students and freelancers faced the same challenge. That's why I created PRO—a community where creative professionals can connect with real projects, gain experience, and earn through their skills.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Today, PRO continues to grow with one mission: <span className="font-bold text-pro-red">Learn. Create. Earn.</span>
-                </p>
-              </div>
-
-              {/* Founder Image Placeholder */}
-              <div className="order-1 lg:order-2 flex justify-center">
-                <div className="w-80 h-96 bg-gradient-to-br from-gray-300 to-gray-400 rounded-2xl shadow-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">👨‍💼</div>
-                    <p className="text-gray-600 font-semibold">Rajeev Ramanathan</p>
-                    <p className="text-gray-500">Founder of PRO</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Founder Section - Full Width Centered */}
+          <div className="text-center space-y-6 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-800 font-light">
+              Hello, I'm <span className="text-pro-red font-semibold">Rajeev Ramanathan</span>, Founder of PRO.
+            </p>
+            <p className="text-base text-gray-800 leading-relaxed">
+              My journey started during my college years when I struggled to find creative work opportunities despite having the skills. I soon realized that many talented students and freelancers faced the same challenge. That's why I created PRO—a community where creative professionals can connect with real projects, gain experience, and earn through their skills.
+            </p>
+            <p className="text-base text-gray-800 leading-relaxed">
+              Today, PRO continues to grow with one mission: <span className="font-semibold text-pro-red">Learn. Create. Earn.</span>
+            </p>
           </div>
         </div>
       </section>
