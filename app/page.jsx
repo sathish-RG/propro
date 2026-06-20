@@ -88,6 +88,71 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Second Hero Section */}
+      <section className="min-h-screen relative overflow-hidden bg-white py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <p className="text-pro-red text-lg font-bold tracking-widest">WHY CHOOSE PRO?</p>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-black">
+                  Need Creative
+                  <br />
+                  <span className="text-pro-red">Work Done?</span>
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-lg">
+                  Whether you're a business owner, startup, content creator, or brand, PRO connects you with skilled professionals ready to bring your ideas to life.
+                </p>
+
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-lg">
+                  From concept to completion, we deliver high-quality creative solutions tailored to your goals.
+                </p>
+              </div>
+
+              {/* Features */}
+              <div className="space-y-4 pt-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-pro-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold">✓</span>
+                  </div>
+                  <p className="text-lg text-gray-700">Verified Creative Professionals</p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-pro-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold">✓</span>
+                  </div>
+                  <p className="text-lg text-gray-700">Quick Turnaround Times</p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-pro-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold">✓</span>
+                  </div>
+                  <p className="text-lg text-gray-700">Affordable & Transparent Pricing</p>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <button className="px-8 py-4 bg-pro-red text-white font-bold text-lg rounded-full hover:bg-red-700 transition-colors inline-block mt-6">
+                Post Your Project
+              </button>
+            </div>
+
+            {/* Right Content - Image */}
+            <div className="flex items-center justify-center">
+              <img
+                src="/IMG 01.png"
+                alt="PRO Team"
+                className="w-full max-w-md mx-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Special Offers Section */}
       <section className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-20 lg:py-32 relative">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
