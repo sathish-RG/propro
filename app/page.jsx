@@ -89,65 +89,75 @@ export default function Home() {
       </section>
 
       {/* Second Hero Section */}
-      <section className="min-h-screen relative overflow-hidden bg-white py-20 lg:py-32">
+      <section 
+        className="relative overflow-hidden py-12 lg:py-20"
+        style={{
+          backgroundImage: 'url(/section%202/WHITE%20BG.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
-            {/* Left Content */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <p className="text-pro-red text-lg font-bold tracking-widest">WHY CHOOSE PRO?</p>
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-black">
-                  Need Creative
-                  <br />
-                  <span className="text-pro-red">Work Done?</span>
-                </h2>
-              </div>
+          {/* Top Statistics Bar */}
+          <div className="mb-12">
+            <img
+              src="/section 2/TABULAR SECTION.png"
+              alt="Statistics"
+              className="w-full h-auto object-contain"
+            />
+          </div>
 
-              <div className="space-y-6">
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-lg">
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left Content - Team Image */}
+            <div className="flex items-center justify-center relative">
+              <img
+                src="/section 2/IMG 01.png"
+                alt="PRO Team"
+                className="w-full max-w-md mx-auto object-contain"
+              />
+              {/* Sparkle decorations */}
+              <img
+                src="/section 2/SPARKLE 01.png"
+                alt="Sparkle"
+                className="absolute top-0 right-0 w-16 h-16 object-contain opacity-80"
+              />
+              <img
+                src="/section 2/SPARKLE 02.png"
+                alt="Sparkle"
+                className="absolute bottom-0 left-0 w-16 h-16 object-contain opacity-80"
+              />
+            </div>
+
+            {/* Right Content - Text */}
+            <div className="space-y-6">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+                <span className="text-black">Need</span>
+                <br />
+                <span className="text-black">Creative</span>
+                <br />
+                <span className="text-pro-red">Work Done?</span>
+              </h2>
+
+              <div className="space-y-4">
+                <p className="text-lg md:text-xl text-gray-800 leading-relaxed max-w-lg">
                   Whether you're a business owner, startup, content creator, or brand, PRO connects you with skilled professionals ready to bring your ideas to life.
                 </p>
 
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-lg">
+                <p className="text-lg md:text-xl text-gray-800 leading-relaxed max-w-lg">
                   From concept to completion, we deliver high-quality creative solutions tailored to your goals.
                 </p>
               </div>
 
-              {/* Features */}
-              <div className="space-y-4 pt-4">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-pro-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold">✓</span>
-                  </div>
-                  <p className="text-lg text-gray-700">Verified Creative Professionals</p>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-pro-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold">✓</span>
-                  </div>
-                  <p className="text-lg text-gray-700">Quick Turnaround Times</p>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-pro-red rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold">✓</span>
-                  </div>
-                  <p className="text-lg text-gray-700">Affordable & Transparent Pricing</p>
-                </div>
+              {/* Brand Symbols */}
+              <div className="pt-4">
+                <img
+                  src="/section 2/BRAND SYMBOL 01.png"
+                  alt="Brand Symbols"
+                  className="h-12 object-contain"
+                />
               </div>
-
-              {/* CTA Button */}
-              <button className="px-8 py-4 bg-pro-red text-white font-bold text-lg rounded-full hover:bg-red-700 transition-colors inline-block mt-6">
-                Post Your Project
-              </button>
-            </div>
-
-            {/* Right Content - Image */}
-            <div className="flex items-center justify-center">
-              <img
-                src="/IMG 01.png"
-                alt="PRO Team"
-                className="w-full max-w-md mx-auto object-contain"
-              />
             </div>
           </div>
         </div>
