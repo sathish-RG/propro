@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const HomeIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -67,6 +67,39 @@ const navItems = [
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState('hero')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    // Create intersection observer to highlight active section
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveItem(entry.target.id)
+          }
+        })
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of section is visible
+      }
+    )
+
+    // Observe all sections
+    navItems.forEach(({ href }) => {
+      const element = document.querySelector(href)
+      if (element) {
+        observer.observe(element)
+      }
+    })
+
+    return () => {
+      navItems.forEach(({ href }) => {
+        const element = document.querySelector(href)
+        if (element) {
+          observer.unobserve(element)
+        }
+      })
+    }
+  }, [])
 
   const handleNavClick = (id, href) => {
     setActiveItem(id)
