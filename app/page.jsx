@@ -181,10 +181,10 @@ export default function Home() {
         id="offers"
         className="relative overflow-hidden py-12 lg:py-16"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.04'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), url(/section%203/WHITE%20BG.jpg)`,
-          backgroundSize: 'auto, cover',
-          backgroundPosition: 'center, center',
-          backgroundColor: '#fff'
+          backgroundImage: 'url(/section%202/WHITE%20BG.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
         }}
       >
         {/* Bottom Right Sparkle */}
