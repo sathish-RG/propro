@@ -57,20 +57,26 @@ const CloseIcon = () => (
 )
 
 const navItems = [
-  { id: 'home',     label: 'Home',     href: '#home',     icon: HomeIcon },
-  { id: 'speakers', label: 'Speakers', href: '#speakers', icon: SpeakersIcon },
-  { id: 'agenda',   label: 'Agenda',   href: '#agenda',   icon: AgendaIcon },
-  { id: 'about',    label: 'About',    href: '#about',    icon: AboutIcon },
-  { id: 'ticket',   label: 'Ticket',   href: '#ticket',   icon: TicketIcon },
+  { id: 'hero',     label: 'Home',     href: '#hero',     icon: HomeIcon },
+  { id: 'services', label: 'Services', href: '#services', icon: SpeakersIcon },
+  { id: 'offers',   label: 'Special Offers',   href: '#offers',   icon: AgendaIcon },
+  { id: 'about',    label: 'About PRO',    href: '#about',    icon: AboutIcon },
+  { id: 'contact',   label: 'Contact',   href: '#contact',   icon: TicketIcon },
 ]
 
 export default function Navbar() {
-  const [activeItem, setActiveItem] = useState('home')
+  const [activeItem, setActiveItem] = useState('hero')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const handleNavClick = (id) => {
+  const handleNavClick = (id, href) => {
     setActiveItem(id)
     setMobileMenuOpen(false)
+    
+    // Smooth scroll to section
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
@@ -85,11 +91,11 @@ export default function Navbar() {
                 <a
                   key={id}
                   href={href}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(id) }}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+                  onClick={(e) => { e.preventDefault(); handleNavClick(id, href) }}
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
                     isActive
-                      ? 'bg-white/75 text-purple-900 shadow-md'
-                      : 'text-purple-800/85 hover:bg-white/30'
+                      ? 'bg-white/75 text-black shadow-md'
+                      : 'text-black/85 hover:bg-white/30'
                   }`}
                 >
                   <Icon />
@@ -101,10 +107,10 @@ export default function Navbar() {
 
           {/* Mobile Menu Button - Visible only on Mobile */}
           <div className="md:hidden w-full flex items-center justify-between">
-            <span className="text-lg font-bold text-purple-900">PRO</span>
+            <span className="text-lg font-bold text-black">PRO</span>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-purple-900 hover:bg-white/30 rounded-lg transition-colors"
+              className="p-2 text-black hover:bg-white/30 rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -122,11 +128,11 @@ export default function Navbar() {
                   <a
                     key={id}
                     href={href}
-                    onClick={(e) => { e.preventDefault(); handleNavClick(id) }}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all ${
+                    onClick={(e) => { e.preventDefault(); handleNavClick(id, href) }}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-purple-100 text-purple-900'
-                        : 'text-gray-700 hover:bg-gray-100'
+                        ? 'bg-gray-200 text-black'
+                        : 'text-black hover:bg-gray-100'
                     }`}
                   >
                     <Icon />

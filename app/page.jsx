@@ -5,6 +5,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section
+        id="hero"
         className="min-h-screen relative overflow-hidden bg-[#E53935]"
         style={{
           backgroundImage: 'url(/bg-pattern.png)',
@@ -17,7 +18,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8 z-10">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight break-words max-w-4xl">
                 <span className="text-black">Where</span>
                 <br />
                 <span className="text-white">Projects</span>
@@ -33,15 +34,15 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2 sm:space-x-4 flex-wrap sm:flex-nowrap">
                   <img
                     src="/FREELANCERS ROUNDS.png"
                     alt="Freelancers"
-                    className="h-24 object-contain"
+                    className="h-16 sm:h-20 md:h-24 object-contain"
                   />
-                  <span className="text-white text-3xl font-black">50+</span>
+                  <span className="text-white text-xl sm:text-2xl md:text-3xl font-black">50+</span>
                 </div>
-                <p className="text-white text-2xl font-bold">freelancers joined!</p>
+                <p className="text-white text-lg sm:text-xl md:text-2xl font-bold">freelancers joined!</p>
               </div>
 
               <div className="flex items-center space-x-3">
@@ -82,6 +83,7 @@ export default function Home() {
 
       {/* Second Section */}
       <section
+        id="services"
         className="relative overflow-hidden py-12 lg:py-20"
         style={{
           backgroundImage: 'url(/section%202/WHITE%20BG.jpg)',
@@ -92,7 +94,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
           {/* Statistics Bar */}
-          <div className="mb-12 relative rounded-3xl shadow-lg overflow-hidden">
+          <div className="hidden lg:block mb-12 relative rounded-3xl shadow-lg overflow-hidden">
             <img
               src="/section 2/TABULAR SECTION.png"
               alt="Statistics"
@@ -176,6 +178,7 @@ export default function Home() {
 
       {/* Special Offers Section — Section 3 */}
       <section
+        id="offers"
         className="relative overflow-hidden py-12 lg:py-16"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.04'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), url(/section%203/WHITE%20BG.jpg)`,
@@ -194,7 +197,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
 
           {/* Section Label */}
-          <div className="flex items-center gap-3 mb-10 lg:mb-14">
+          <div className="flex items-center gap-3 mb-10 lg:mb-14 justify-center md:justify-start">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#E53935" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5L12 2Z" />
             </svg>
@@ -207,7 +210,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start mb-16 lg:mb-20">
 
             {/* Left — Clients */}
-            <div className="space-y-4">
+            <div className="space-y-4 text-center md:text-left">
               <h3 className="text-[80px] sm:text-[88px] lg:text-[100px] font-black text-black leading-none tracking-tight">
                 25%
               </h3>
@@ -220,7 +223,7 @@ export default function Home() {
             </div>
 
             {/* Center — Freelancers */}
-            <div className="space-y-4">
+            <div className="space-y-4 text-center md:text-left">
               <h3 className="text-[80px] sm:text-[88px] lg:text-[100px] font-black text-[#E53935] leading-none tracking-tight">
                 50%
               </h3>
@@ -243,8 +246,8 @@ export default function Home() {
           </div>
 
           {/* Founder Bio - 2 Column Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start mt-[-100px] md:mt-[-180px] lg:mt-[-400px]">
-            <div className="text-left pt-8 md:pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start mt-0 md:mt-[-180px] lg:mt-[-400px]">
+            <div className="text-center md:text-left pt-8 md:pt-12">
               <p className="text-base md:text-[17px] text-gray-800 mb-4 font-normal">
                 Hello, I&apos;m{' '}
                 <span className="text-[#E53935] font-semibold">Rajeev Ramanathan</span>
@@ -274,6 +277,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section
+        id="contact"
         className="py-20 text-white text-center relative overflow-hidden"
         style={{
           backgroundImage: 'url(/bg-pattern.png)',
