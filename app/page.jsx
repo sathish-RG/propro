@@ -329,7 +329,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 PRO. All rights reserved. Learn. Create. Earn.</p>
+            <p>&copy; 2026 PRO. All rights reserved. Learn. Create. Earn.</p>
           </div>
         </div>
       </footer>
